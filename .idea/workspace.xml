@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c30ccb02-8fb8-4ed3-bf4e-01ff1e32fbfd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Cart.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/cakes/cart.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/LangController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/Locale.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/en/message.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/vi/message.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CakeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CakeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/cakes/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cakes/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cakes/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cakes/list.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -125,8 +125,13 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../people_manager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/lang/vi" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Hai\case-study-2\resources\lang\vi" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -157,8 +162,16 @@
       <option name="presentableId" value="Default" />
       <updated>1572830742881</updated>
       <workItem from="1572830746115" duration="22669000" />
-      <workItem from="1572916746903" duration="12041000" />
+      <workItem from="1572916746903" duration="16213000" />
     </task>
+    <task id="LOCAL-00001" summary="add cart file">
+      <created>1572937792689</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1572937792689</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,5 +190,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="add cart file" />
+    <option name="LAST_COMMIT_MESSAGE" value="add cart file" />
   </component>
 </project>

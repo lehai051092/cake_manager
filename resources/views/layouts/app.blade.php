@@ -25,24 +25,53 @@
 <div id="app">
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="{{route("cakes.index")}}">
-                HOME
-            </a>
-            <a class="navbar-brand" href="{{route("cakes.create")}}">
-                CREATE
-            </a>
-            <a class="navbar-brand" href="{{route("cakes.show")}}">
-                SHOW
-            </a>
-            <a class="navbar-brand" href="{{route("carts.cart")}}">
-                CART
-            </a>
+            <div class="form-inline my-2 my-lg-0">
+                <a class="navbar-brand" href="{{route("cakes.index")}}">
+                    @lang('message.home')
+                </a>
+                <a class="navbar-brand" href="{{route("cakes.create")}}">
+                    CREATE
+                </a>
+                <a class="navbar-brand" href="{{route("cakes.show")}}">
+                    SHOW
+                </a>
+                <a class="navbar-brand" href="{{route("carts.cart")}}">
+                    CART
+                </a>
+
+                <div class="form-group">
+                    <form method="post" action="{{route('setLang')}}">
+                        @csrf
+                        <select class="form-control" onchange="this.form.submit()" name="language">
+                            <option
+                                @if(\Illuminate\Support\Facades\Session::has('language'))
+                                @if(\Illuminate\Support\Facades\Session::get('language') == "vi")
+                                selected
+                                @endif
+                                @endif
+                                value="vi"
+                            >VN
+                            </option>
+                            <option
+                                @if(\Illuminate\Support\Facades\Session::has('language'))
+                                @if(\Illuminate\Support\Facades\Session::get('language') == "en")
+                                selected
+                                @endif
+                                @endif
+                                value="en">
+                                EN
+                            </option>
+                        </select>
+                    </form>
+                </div>
+            </div>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
@@ -51,9 +80,13 @@
                 </ul>
 
                 <!-- Right Side Of Navbar -->
+
+
                 <ul class="navbar-nav ml-auto">
                     <form class="form-inline my-2 my-lg-0" method="get" action="{{route("cakes.search")}}">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
+                        @csrf
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+                               name="search">
                         <button class="btn btn-primary" type="submit">Search</button>
                     </form>
                     <!-- Authentication Links -->
@@ -79,7 +112,6 @@
                                                      document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
-
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST"
                                       style="display: none;">
                                     @csrf
