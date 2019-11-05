@@ -71,4 +71,5 @@ class CakeController extends Controller
         $cake =$this->cakeService->findById($id);
         return view("cakes.detail", compact("cake"));
     }
+
 }

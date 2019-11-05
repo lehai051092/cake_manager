@@ -9,7 +9,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{$cake->nameCake}}</h5>
                             <p>{{$cake->priceCake}}VNĐ </p>
-                            <a href="#" class="btn btn-primary">Add To Cart</a>
+                            <a href="{{route("carts.add", $cake->id)}}" class="btn btn-primary">Add To Cart</a>
                             <a href="{{route("cakes.detail", $cake->id)}}" class="btn btn-primary">Detail</a>
                         </div>
                     </div>

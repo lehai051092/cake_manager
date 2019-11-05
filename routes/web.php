@@ -25,6 +25,11 @@ Route::prefix('users')->group(function (){
     Route::get('list','UserController@index')->name('users.index');
 });
 
+Route::prefix('carts')->group(function (){
+    Route::get('{id}/add','CartController@addToCart')->name('carts.add');
+    Route::get('cart','CartController@showCart')->name('carts.cart');
+});
+
 Route::prefix('cakes')->group(function (){
     Route::get('list','CakeController@index')->name('cakes.index');
     Route::get("{id}/edit", "CakeController@edit")->name("cakes.edit");
